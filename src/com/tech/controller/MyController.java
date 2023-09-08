@@ -143,13 +143,7 @@ public class MyController {
 		
 		Account acc=si.editAccount(aadhar);
 		List<AccountTransaction> act=acc.getTransaction();
-		for(AccountTransaction t:act) {
-			System.out.println(t.getT_Id());
-			System.out.println(t.getDate());
-			System.out.println(t.getAmount());
-			System.out.println(t.getDebit_credit());
-			System.out.println(t.getTotal_Balance());
-		}
+		
 		m.addAttribute("data", act);
 		return "transaction";
 		
